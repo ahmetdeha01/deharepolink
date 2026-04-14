@@ -1,5 +1,13 @@
 # DSA210 Project - 3D Printing Parameter Analysis
 
+# DSA 210: Introduction to Data Science - Term Project
+
+**Term:** 2025-2026 Spring  
+**Student:** Ahmet Deha Yıldırım
+**Student ID:** 00032656  
+
+**Project Title:** 3D Printing Parameter Analysis
+
 ## Project Overview
 This project investigates how 3D printing parameters affect print quality and mechanical performance. The analysis focuses on how controllable printing settings affect three output variables: surface roughness, tensile strength, and elongation.
 
