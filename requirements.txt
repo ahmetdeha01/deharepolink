@@ -1,5 +1,7 @@
-+ pandas
-+ numpy
-+ matplotlib
-+ scikit-learn
-+ jupyter
++pandas
++numpy
++matplotlib
++seaborn
++scipy
++jupyter
++scikit-learn
