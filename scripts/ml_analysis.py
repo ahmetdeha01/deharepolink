@@ -18,7 +18,7 @@ from xgboost import XGBRegressor
 import warnings
 warnings.filterwarnings('ignore')
 
-# ── 1. Load Data ──────────────────────────────────────────────────────────
+#  1. Load Data 
 df = pd.read_csv('enriched_data.csv')
 
 # Drop raw categorical columns (already encoded)
@@ -32,7 +32,7 @@ print(f"Features ({len(FEATURES)}): {FEATURES}")
 print(f"Targets:  {TARGETS}")
 print(f"Dataset:  {X.shape[0]} rows\n")
 
-# ── 2. Models ─────────────────────────────────────────────────────────────
+# ── 2. Models 
 models = {
     'Linear Regression' : LinearRegression(),
     'Random Forest'     : RandomForestRegressor(n_estimators=100, random_state=42),
@@ -40,7 +40,7 @@ models = {
     'SVR'               : SVR(kernel='rbf', C=10, epsilon=0.1),
 }
 
-# ── 3. Train / Evaluate ───────────────────────────────────────────────────
+# ── 3. Train / Evaluate 
 results = {}   # results[target][model_name] = {rmse, mae, r2, cv_r2}
 
 for target in TARGETS:
@@ -78,7 +78,7 @@ for target in TARGETS:
             'CV_R2'  : round(cv_scores.mean(), 3),
         }
 
-# ── 4. Print Results Table ────────────────────────────────────────────────
+#  4. Print Results Table 
 for target in TARGETS:
     print(f"\n{'='*60}")
     print(f"  TARGET: {target.upper()}")
@@ -88,7 +88,7 @@ for target in TARGETS:
     for name, m in results[target].items():
         print(f"  {name:<22} {m['RMSE']:>8} {m['MAE']:>8} {m['R2']:>8} {m['CV_R2']:>8}")
 
-# ── 5. Feature Importance (Random Forest) ────────────────────────────────
+#  5. Feature Importance (Random Forest) 
 fig, axes = plt.subplots(1, 3, figsize=(18, 6))
 fig.suptitle('Feature Importance — Random Forest', fontsize=15, fontweight='bold')
 
@@ -112,7 +112,7 @@ plt.savefig('feature_importance.png', dpi=150, bbox_inches='tight')
 plt.close()
 print("\n✅ Saved: feature_importance.png")
 
-# ── 6. Model Comparison Plot ──────────────────────────────────────────────
+#  6. Model Comparison Plot 
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 fig.suptitle('Model Comparison — R² Score (Test Set)', fontsize=15, fontweight='bold')
 
@@ -136,7 +136,7 @@ plt.savefig('model_comparison.png', dpi=150, bbox_inches='tight')
 plt.close()
 print("✅ Saved: model_comparison.png")
 
-# ── 7. Actual vs Predicted (Best Model per Target) ───────────────────────
+#  7. Actual vs Predicted (Best Model per Target) 
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))
 fig.suptitle('Actual vs Predicted — Best Model per Target', fontsize=14, fontweight='bold')
 
