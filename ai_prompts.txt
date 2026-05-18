@@ -1,9 +1,9 @@
-AI tools were used during the preparation of this project.
+AI tools (chatGpt and Claude) were used during the preparation of this project.
 
 Main uses:
 - organizing the GitHub repository structure
 - drafting and revising the README.md content
-- generating and refining initial Python code for data cleaning, EDA, and hypothesis testing
+- Refining initial Python code for data cleaning, EDA, and hypothesis testing
 - helping with documentation and milestone planning
 
 Example prompts used:
@@ -12,7 +12,7 @@ Example prompts used:
 - "Explain how to organize raw and processed data for GitHub submission."
 - "What ML methods should I apply to predict roughness, tensile strength and elongation?"
 - "Generate feature engineering and Gaussian noise augmentation code for my 3D printing dataset."
-- "Write ML analysis code using Linear Regression, Random Forest, XGBoost and SVR for my dataset."
+- "Help me with ML analysis code using Linear Regression, Random Forest, XGBoost and SVR for my dataset."
 - "Help me formulate and test hypotheses based on my data."
 
 All generated outputs were reviewed, edited, and applied by me.
